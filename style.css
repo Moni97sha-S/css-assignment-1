@@ -1,0 +1,278 @@
+/* ********* */
+/*  Common   */
+/* ********* */
+
+* {
+    /* consider padding within width */
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Noto Sans Sharada', sans-serif;
+}
+
+a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #A389CC;
+}
+
+a:hover {
+    opacity: 0.9;
+}
+
+ul {
+    /* default */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.common-btn {
+    background-color: #FFD8DB;
+    border-radius: 20px;
+    padding: 14px 20px;
+}
+
+.common-btn.dark {
+    /* any element having common-btn AND dark classes */
+    background-color: #5243c0;
+    color: #ffffff;
+}
+
+/* Common place  */
+.container {
+    /* background-color: rgb(154, 204, 248); */
+    max-width: 1000px;
+    /* we have eg: div has some width bring that to center */
+    margin: 0 auto;
+    /* Mobile-view */
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ********* */
+/*  Header   */
+/* ********* */
+header {
+    /* background-color: yellow; */
+    padding: 10px 0;
+}
+
+header img {
+    width: 120px;
+}
+
+header ul li {
+    /* By default, every list-item is a block element */
+    display: inline-block;
+}
+
+header ul li a {
+    color: grey;
+    margin: 15px;
+}
+
+header ul li a:hover,
+header li a.active {
+    color: black;
+    /* space between <a> link text and underline */
+    /* instead of padding-bottom:5px & border-bottom: 4px solid #5243c0*/
+    text-decoration: underline #5243c0 solid 3px;
+    text-underline-offset: 8px;
+}
+
+/* ********* */
+/*   Main    */
+/* ********* */
+main .container {
+    flex-direction: row-reverse;
+}
+
+main .banner {
+    padding: 70px 0;
+    margin-bottom: 150px;
+}
+
+main .content {
+    padding: 30px;
+}
+
+main .content {
+    width: 400px;
+}
+
+main .content h1 {
+    font-weight: bolder;
+    font-size: 55px;
+    /* text-indent: 0rem; */
+    margin: 20px 0 0;
+}
+
+main .content p {
+    margin-top: 0;
+    font-size: 12px;
+    color: rgb(81, 80, 80);
+}
+
+main h1 img {
+    padding: .5px 1px 0;
+    width: 10px;
+    height: 10px;
+}
+
+main .content span {
+    color: #5243c0;
+}
+
+main .content div {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 30px;
+}
+
+main .content div a {
+    margin-right: 20px;
+}
+
+main .content div button {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    background-image: url('img/img/arrow-up.png');
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+main .content div button:last-child {
+    background-image: url('img/img/arrow-down.png');
+    border: 2px solid lightgray;
+
+}
+
+main .content ul {
+    margin-top: 50px;
+}
+
+main .content ul li {
+    background-color: #fafafa;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 330px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 4px #f1f1f1;
+    transition: all .2s;
+
+}
+
+main .content ul li .gray {
+    padding-right: 10px;
+}
+
+main .content ul li .blue {
+    display: none;
+}
+
+main .content ul li:hover,
+main .content ul li.active {
+    background: #fff;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+main .content ul li:hover .gray,
+main .content ul li.active .gray {
+    display: none;
+
+}
+
+main .content ul li:hover .blue,
+main .content ul li.active .blue {
+    padding-right: 10px;
+    display: block;
+}
+
+main .content ul li.active {
+    transform: scale(1.0);
+    box-shadow: 0px 0.5px 3px 0px rgba(0, 0, 0, 0.4);
+    width: 330px;
+}
+
+main .content ul li:last-child {
+    margin-bottom: 90px;
+}
+
+main .content ul li .title {
+    white-space: nowrap;
+    width: 20px;
+    padding-right: 130px;
+    color: black;
+    font-weight: bold;
+}
+
+main .content ul li .date {
+    color: #c6c5c3;
+    white-space: nowrap;
+    padding: 0 15px;
+}
+
+main .content ul li .tag {
+    display: inline-block;
+    border-radius: 50px;
+    width: 20px;
+    height: 10px;
+}
+
+main .content ul li .tag.lightpink {
+    background-color: #FED7DA;
+}
+
+main .content ul li .tag.red {
+    background-color: #FD6534;
+}
+
+
+main .content ul li .tag.lightgreen {
+    background-color: #9ED095;
+}
+
+main .content ul li .tag.lightorange {
+    background-color: #FFE4A0;
+}
+
+/* parent */
+main .banner {
+    /* background-color: red; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* child */
+main .banner img {
+    width: 105%;
+}
+
+/* Mobile responsive */
+/* @media (max-width:700px) {
+    main {
+        padding: 30px 0;
+    }
+
+    main.container {
+        flex-direction: column;
+    }
+} */
